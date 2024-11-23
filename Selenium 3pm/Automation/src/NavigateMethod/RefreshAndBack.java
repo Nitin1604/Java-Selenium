@@ -13,9 +13,9 @@ public class RefreshAndBack {
 		driver.manage().window().maximize();
 		
 		// This website will render first
-     	driver.get("https://www.swiggy.com");
+     	        driver.get("https://www.swiggy.com");
      	
-     	// Wait for 2 second pause to navigate to next page
+     	       // Wait for 2 second pause to navigate to next page
 		Thread.sleep(2000);
 		
 		// Navigate to the next page when 2 seconds was completed
