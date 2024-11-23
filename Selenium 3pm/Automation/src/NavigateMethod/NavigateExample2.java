@@ -10,9 +10,9 @@ public class NavigateExample2 {
 		WebDriver driver = new ChromeDriver();
 		
 		// Maximize the window
-	    driver.manage().window().maximize();
+	       driver.manage().window().maximize();
 	    
-	    // First this url will rendered
+	        // First this url will rendered
 		driver.get("https://www.youtube.com");
 		
 		// Wait for 2 second pause to navigate next page
