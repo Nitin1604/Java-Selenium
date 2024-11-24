@@ -20,6 +20,6 @@ public class idCode {
 	   WebElement passwordTextField = driver.findElement(By.id("pass"));
 	   
 	   Thread.sleep(2000);
-       passwordTextField.sendKeys("nitinsokhal123");
+           passwordTextField.sendKeys("nitinsokhal123");
 	}
 }
