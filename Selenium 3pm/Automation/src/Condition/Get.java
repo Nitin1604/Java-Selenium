@@ -28,7 +28,7 @@ public class Get {
 		
 		  // Wait for a few seconds to see the browser open
         
-            Thread.sleep(3000); // 3-second pause
+            Thread.sleep(2000); // 2-second pause
     
          // Close the browser
            driver.quit();
