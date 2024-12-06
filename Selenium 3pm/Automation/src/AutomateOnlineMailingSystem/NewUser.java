@@ -37,12 +37,7 @@ public class NewUser {
 		WebElement accountBtn = driver.findElement(By.className("col-sm-push-3"));
 		Thread.sleep(2000);
 		accountBtn.click();
-		
-		
-		
-		
-		
-
+	
 	}
 
 }
