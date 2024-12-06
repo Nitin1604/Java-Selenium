@@ -14,7 +14,7 @@ public class NewUser {
 		driver.manage().window().maximize();
 		
 		// Filling details in the name text field
-     	WebElement nameTextField = driver.findElement(By.name("name"));
+     	        WebElement nameTextField = driver.findElement(By.name("name"));
 		Thread.sleep(2000);
 		nameTextField.sendKeys("Rohan Singh");
 		
