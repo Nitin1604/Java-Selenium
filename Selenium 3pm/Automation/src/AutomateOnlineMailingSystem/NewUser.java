@@ -1,4 +1,4 @@
-package AutomateOnlineMailingSystem; 
+package AutomateOnlineMailingSystem;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class NewUser {
 		driver.manage().window().maximize();
 		
 		// Filling details in the name text field
-     	        WebElement nameTextField = driver.findElement(By.name("name"));
+     	WebElement nameTextField = driver.findElement(By.name("name"));
 		Thread.sleep(2000);
 		nameTextField.sendKeys("Rohan Singh");
 		
@@ -70,6 +70,39 @@ public class NewUser {
 		WebElement loginBtn2 = driver.findElement(By.cssSelector("input.col-sm-push-3"));
 		Thread.sleep(3000);
 		loginBtn2.click();		
+		
+		// After clicking login Button, dashboard is accessible
+		WebElement composeTab = driver.findElement(By.className("grid"));
+		Thread.sleep(4000);
+		composeTab.click();
+		
+		// Writing email id in the To field
+		WebElement ToField = driver.findElement(By.name("to1"));
+		Thread.sleep(3000);
+		ToField.sendKeys("nitinsokhal@gmail.com");
+		
+		// Writing subject in the Subject field
+		WebElement subjectField = driver.findElement(By.name("subject"));
+		Thread.sleep(3000);
+		subjectField.sendKeys("Application for one day leave from office.");
+		
+		// Writing message in the "Message" text area
+		WebElement messageTextarea = driver.findElement(By.name("message"));
+		Thread.sleep(3000);
+		messageTextarea.sendKeys("Hi, i want one day leave from the office due to some urgent work.");
+		
+		// Clicking on send button 
+		driver.findElement(By.className("col-sm-push-2")).click();
+		Thread.sleep(2000);
+		driver.navigate().to("http://localhost:8080/oms/sent.jsp");
+		
+		// To view mail , click on message icon 
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[@alt='read']")).click();
+		
+		// To go back , click on back button
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//img[@alt='back']")).click();
 	
 	}
 
