@@ -9,7 +9,7 @@ import java.time.Duration;
 public class openingClosing {
 	public static void main(String[] args) throws Exception {
 		
-	        // Initialize the WebDriver
+			// Initialize the WebDriver
 	        WebDriver driver = new ChromeDriver();
 	        
 	        // Open a website (e.g., Google)

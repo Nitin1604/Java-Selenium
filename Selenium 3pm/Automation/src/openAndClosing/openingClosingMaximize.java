@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class openingClosingMaximize {
 	public static void main(String[] args) throws Exception {
 		
-	// Initialize the WebDriver
+		// Initialize the WebDriver
         WebDriver driver = new ChromeDriver();
         
         // Open a website 
@@ -17,11 +17,11 @@ public class openingClosingMaximize {
         
         // Wait for a few seconds to see the browser open
         
-        Thread.sleep(3000); // 3-second pause
+            Thread.sleep(3000); // 3-second pause
         
         // Close the browser
         driver.quit();
 		
-   }
+	}
 
 }
