@@ -20,8 +20,8 @@ public class youtubeAutomation {
 
             // Locate the search bar and search for a term
             WebElement searchBox = driver.findElement(By.name("search_query"));
-//            searchBox.sendKeys("CodeWithHarry");
-            searchBox.sendKeys("tmkoc 1356");
+            searchBox.sendKeys("CodeWithHarry");
+            
             searchBox.submit();
 
             // Wait for results to load
