@@ -27,17 +27,17 @@ public class xpathExample1 {
 		// Entering text in the text input
 		WebElement nameText = driver.findElement(By.id("name"));
 		Thread.sleep(2000);
-		nameText.sendKeys("Rohan Kumar");
+		nameText.sendKeys("Nitin Sokhal");
 		
 		// Entering text in the email id input
 		WebElement emailID = driver.findElement(By.id("email"));
 		Thread.sleep(2000);
-		emailID.sendKeys("rohankumar@gmail.com");
+		emailID.sendKeys("nitinsokhal@gmail.com");
 		
 		// Entering the text in the password input 
 		WebElement passwordText = driver.findElement(By.id("password"));
 		Thread.sleep(2000);
-		passwordText.sendKeys("rohankumar123");
+		passwordText.sendKeys("nitinsokhal321");
 		
 		// Click on eye icon 
 		WebElement eyeIcon = driver.findElement(By.tagName("path"));
@@ -54,12 +54,12 @@ public class xpathExample1 {
 		// Entering text in the email id input
 		WebElement emailIDText = driver.findElement(By.id("email"));
 		Thread.sleep(2000);
-		emailIDText.sendKeys("rohankumar@gmail.com");	
+		emailIDText.sendKeys("nitinsokhal@gmail.com");	
 	
 		// Entering the text in the password input 
 		WebElement passwordTextField = driver.findElement(By.id("password"));
 		Thread.sleep(2000);
-		passwordTextField.sendKeys("rohankumar123");
+		passwordTextField.sendKeys("nitinsokhal321");
 		
 		// Click on eye icon 
 		WebElement eyeIconClick = driver.findElement(By.tagName("path"));
@@ -70,6 +70,22 @@ public class xpathExample1 {
 		WebElement loginBtn = driver.findElement(By.xpath("//button[text()='Login']"));
 		Thread.sleep(2000);
 		loginBtn.click();
+		
+		// Click on "Register now" link.
+		WebElement registerNowLink = driver.findElement(By.className("hover:text-slate-700"));
+		Thread.sleep(2000);
+		registerNowLink.click();
+		
+		// Click on "Login now" link.
+		WebElement loginNowLink = driver.findElement(By.className("hover:text-slate-700"));
+		Thread.sleep(2000);
+		loginNowLink.click();
+		
+		// Click on "Register now" link.
+		WebElement registerNowLinkClick = driver.findElement(By.className("hover:text-slate-700"));
+		Thread.sleep(2000);
+		registerNowLinkClick.click();
+				
 			
 	    Thread.sleep(4000);
 		driver.quit();
