@@ -13,6 +13,7 @@ public class AutomateBlinkit {
 		driver.manage().window().maximize();
 		
 		WebElement popup = driver.findElement(By.xpath("//button['btn location-box mask-button']"));
+		
 		popup.click();
 		
 		Thread.sleep(2000);

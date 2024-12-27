@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class NewUser {
 
@@ -14,7 +15,7 @@ public class NewUser {
 		driver.manage().window().maximize();
 		
 		// Filling details in the name text field
-     	        WebElement nameTextField = driver.findElement(By.name("name"));
+     	WebElement nameTextField = driver.findElement(By.name("name"));
 		Thread.sleep(2000);
 		nameTextField.sendKeys("Rohan Singh");
 		
@@ -100,10 +101,61 @@ public class NewUser {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//img[@alt='read']")).click();
 		
-		// To go back , click on back button
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//img[@alt='back']")).click();
-	
+		// To reply on "Read Mail" after clicking on Message icon
+		Thread.sleep(2000);
+		WebElement msgTextArea = driver.findElement(By.name("message"));
+		Thread.sleep(2000);
+		msgTextArea.sendKeys("Ok you can take leave.");
+		
+		// Click on send button
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("input.col-sm-2")).click();
+		
+		// Navigate back to Sent tab again
+		Thread.sleep(2000);
+		driver.navigate().to("http://localhost:8080/oms/sent.jsp");
+		
+		// To perform deletion click on delete icon again before that first click on message icon
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//img[@alt='read']")).click();
+		
+		// To delete the mail by clicking on delete icon image
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//img[@alt='delete']")).click();
+		
+		// Type something in search input
+		Thread.sleep(2000);
+		WebElement searchInput = driver.findElement(By.name("search"));
+		searchInput.sendKeys("Selenium Tutorial");
+		
+		// Click on Search Web Button 
+		Thread.sleep(2000);
+		WebElement searchWebBtn = driver.findElement(By.xpath("//button[text()='Search Web']"));
+		searchWebBtn.click();
+		
+		// Navigate back to dashboard 
+		Thread.sleep(2000);
+		driver.navigate().back();
+		
+		// Locate the search input field and clear the previously entered query
+		WebElement searchField = driver.findElement(By.name("search"));
+		Thread.sleep(2000);
+		searchField.clear(); // Clear the existing text
+		searchField.sendKeys("What is xpath?");
+		
+		// Click on Search Web Button 
+		Thread.sleep(2000);
+		WebElement searchWebBtnClick = driver.findElement(By.xpath("//button[text()='Search Web']"));
+		searchWebBtnClick.click();		
+		
+		// Click the first link in the result page
+		Thread.sleep(2000);
+		WebElement linkVisit = driver.findElement(By.className("LC20lb"));
+		linkVisit.click();
+		
+		//to perform Scroll on application using Selenium
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,550)", "");
 	}
 
 }

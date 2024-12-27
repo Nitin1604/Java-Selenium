@@ -26,15 +26,17 @@ public class AutomateDemoWebshop {
 		// enter the first name
 		WebElement firstName = driver.findElement(By.id("FirstName"));
 		 Thread.sleep(2000);
-		firstName.sendKeys("Rohan");
+		firstName.sendKeys("Nitin");
 		// enter the last name
 		WebElement lastName = driver.findElement(By.id("LastName"));
 		 Thread.sleep(2000);
-		lastName.sendKeys("Kumar");
+		lastName.sendKeys("Sokhal");
 		// enter the email
 
-		int no = r.nextInt(100);
-		String emailID = "rohankumar" + no + "@gmail.com";
+//		int no = r.nextInt(100);
+//		String emailID = "rohankumar" + no + "@gmail.com";
+
+		String emailID = "nitinsokhal@gmail.com";
 		WebElement email = driver.findElement(By.id("Email"));
 		 Thread.sleep(2000);
 		email.sendKeys(emailID);
