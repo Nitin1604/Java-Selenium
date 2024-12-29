@@ -34,20 +34,16 @@ public class uploadingFilesOnNaukri {
         workStatus1stHeading.click();
         
         WebElement uploadResume = driver.findElement(By.xpath("//button[text()='Upload Resume']"));
-        uploadResume.click(); // Click on the upload button to trigger the file chooser dialog
-        
-        // File path to be uploaded
+        uploadResume.click(); 
+       
         String filePath = "C:\\Users\\ACER\\Desktop\\Resume_v5.pdf";
-        
-        // Copy file path to clipboard
+       
         StringSelection selection = new StringSelection(filePath);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
-        
-        // Use Robot class to simulate keyboard actions
+      
         Robot robot = new Robot();
-        Thread.sleep(2000); // Give some time for the file dialog to appear
-        
-        // Press CTRL + V to paste the file path
+        Thread.sleep(2000); 
+       
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_V);
@@ -55,12 +51,11 @@ public class uploadingFilesOnNaukri {
         
         Thread.sleep(1000);
         
-        // Press ENTER to confirm the upload
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         
-        Thread.sleep(3000); // Wait for the file upload to complete
+        Thread.sleep(3000); 
         
-        driver.quit(); // Close the browser
+        driver.quit(); 
     }
 }
