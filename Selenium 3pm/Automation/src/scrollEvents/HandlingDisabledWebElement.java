@@ -21,10 +21,7 @@ public class HandlingDisabledWebElement {
 		JavascriptExecutor jSe = (JavascriptExecutor) driver;
 		jSe.executeScript("arguments[0].value='Nitin Sokhal'", disabled);
 		jSe.executeScript("arguments[0].value='nitinsokhal@gmail.com'", driver.findElement(By.id("email")));
-		
-		
-		
-		
+	
 	}
 
 }
