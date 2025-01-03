@@ -27,7 +27,7 @@ public class uploadingFilesOnNaukri {
         JavascriptExecutor jsExe = (JavascriptExecutor) driver;
         for (int i = 0; i < 3; i++) {
             jsExe.executeScript("window.scrollBy(0,1000)");
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         }
         
         WebElement workStatus1stHeading = driver.findElement(By.className("main-3"));
@@ -54,7 +54,7 @@ public class uploadingFilesOnNaukri {
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         
-        Thread.sleep(3000); 
+        Thread.sleep(5000); 
         
         driver.quit(); 
     }
