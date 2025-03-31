@@ -18,7 +18,7 @@ public class alertBox {
 		
 		WebElement alertBox = driver.findElement(By.id("buttonAlert2"));
 		alertBox.click();
-
+		System.out.println("Alert box was clicked!");
 	
 	}
 }
