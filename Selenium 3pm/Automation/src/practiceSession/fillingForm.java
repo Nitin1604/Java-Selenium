@@ -48,7 +48,7 @@ public class fillingForm {
        Thread.sleep(3000);
        registerBtn.click();
        
-       // Entering email id in "login" page
+       // Entering email id in "login" page and wait statement is used because elements might not be immediately available due to page loading
        WebElement loginEmailField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("email")));
        Thread.sleep(2000);
        loginEmailField.sendKeys("ketansingh@gmail.com");
